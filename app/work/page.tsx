@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata("Work");
 
 const Work = () => {
     return (
-        <main>Work</main>
+        <section>Work</section>
     )
 }
 

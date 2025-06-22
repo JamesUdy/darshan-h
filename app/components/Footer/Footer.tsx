@@ -5,7 +5,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <section className='w-screen h-[80vh] relative overflow-hidden flex items-center justify-center'>
-            <div className='w-[90%] h-full flex flex-col items-center justify-center space-y-4 z-[1]'>
+            <div className='w-[92%] h-full flex flex-col items-center justify-center space-y-4 z-[1]'>
                 <div className='w-full h-[86%] flex flex-col items-center justify-between bg-black border border-gray-400/20 rounded-lg p-[2.4%]'>
                     <div className='w-full flex items-center justify-between h-[10%]'>
                         <p className='w-fit text-white/40 uppercase text-[10px] font-semibold tracking-wide'>That's all folks!</p>

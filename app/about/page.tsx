@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata("About");
 
 const About = () => {
     return (
-        <main>About</main>
+        <section>About</section>
     )
 }
 

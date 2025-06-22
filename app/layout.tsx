@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { createMetadata } from "./lib/metadata";
+import Hero from "./components/Hero";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden !bg-[rgb(15,15,15)]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden !bg-[rgb(15,15,15)] w-screen min-h-screen flex flex-col items-center justify-start gap-y-6 pb-24`}
       >
         <Navbar />
-        {children}
+        
+        <main className="w-screen h-fit flex flex-col items-center justify-start space-y-6">
+          <Hero />
+          {/* {children} */}
+        </main>
+        
         <Footer />
       </body>
     </html>

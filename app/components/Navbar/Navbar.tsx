@@ -34,7 +34,7 @@ const Navbar = () => {
                 }
             </div>
 
-            <div className='w-[15%] h-fit'>
+            <div className='w-[15%] h-fit flex items-center justify-end'>
                 <div className='w-[64%] h-fit relative group'>
                     <div className='w-full py-2.5 bg-black border border-white/10 rounded-md flex items-center justify-center cursor-pointer space-x-2 ease-in-out group hover:scale-110 duration-200 relative z-[1]'>
                         <span className='uppercase !text-[10px]'>Let's Chat</span>

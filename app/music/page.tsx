@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata("Music");
 
 const Music = () => {
     return (
-        <main>Music</main>
+        <section>Music</section>
     )
 }
 

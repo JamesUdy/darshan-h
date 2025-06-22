@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata("Tools");
 
 const Tools = () => {
     return (
-        <main>Tools</main>
+        <section>Tools</section>
     )
 }
 
