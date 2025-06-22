@@ -28,19 +28,22 @@ const Navbar = () => {
                             className='w-fit capitalize group flex flex-col items-start space-y-2'
                         >
                             <span>{link}</span>
-                            <div className={`h-[1px] ${(currPathName === `/${link}`) ? "w-full bg-amber-400" : "w-0 group-hover:w-full bg-white"} ease-in duration-150`} />
+                            <div className={`h-[1px] ${(currPathName === `/${link}`) ? "w-full bg-amber-400" : "w-0 group-hover:w-full bg-white/80"} ease-in duration-150`} />
                         </Link>
                     ))
                 }
             </div>
 
             <div className='w-[15%] h-fit'>
-                <div className='w-[64%] py-2.5 bg-black border border-white/10 rounded-md flex items-center justify-center cursor-pointer space-x-2 group hover:scale-110 ease-in-out duration-200'>
-                    <span className='uppercase !text-[10px]'>Let's Chat</span>
-                    <div className='w-3 aspect-square flex flex-col overflow-hidden'>
-                        <div className='group-hover:-translate-y-[120%] ease-in-out duration-200'><img loading="lazy" alt="" src="https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f89eae8e35552b13d78bf2_arrow-narrow-up-right.svg" className="w-full"/></div>
-                        <div className='group-hover:-translate-y-[110%] ease-in-out duration-200'><img loading="lazy" alt="" src="https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f89eae8e35552b13d78bf2_arrow-narrow-up-right.svg" className="w-full"/></div>
+                <div className='w-[64%] h-fit relative group'>
+                    <div className='w-full py-2.5 bg-black border border-white/10 rounded-md flex items-center justify-center cursor-pointer space-x-2 ease-in-out group hover:scale-110 duration-200 relative z-[1]'>
+                        <span className='uppercase !text-[10px]'>Let's Chat</span>
+                        <div className='w-3 aspect-square flex flex-col overflow-hidden z-[1]'>
+                            <div className='group-hover:-translate-y-[120%] ease-in-out duration-200'><img loading="lazy" alt="" src="https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f89eae8e35552b13d78bf2_arrow-narrow-up-right.svg" className="w-full"/></div>
+                            <div className='group-hover:-translate-y-[110%] ease-in-out duration-200'><img loading="lazy" alt="" src="https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f89eae8e35552b13d78bf2_arrow-narrow-up-right.svg" className="w-full"/></div>
+                        </div>
                     </div>
+                    <div className='absolute top-0 left-0 w-full h-full scale-110 opacity-0 pointer-events-none group-hover:opacity-100 ease-in-out duration-200 bg-white/5 z-[0] blur-lg' />
                 </div>
             </div>
         </section>
