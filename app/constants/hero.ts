@@ -30,7 +30,7 @@ export const HeroContent: BaseHeroType = {
         content: "Some tools $ that I $ use daily $ to create",
     },
     default: {
-        header: "founding team member and lead designer, bangalore",
+        header: "founding team member and lead designer in Terra, bangalore",
         icons: ["https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f984c1d2d154ba98d25611_Emoji.png", "https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f984c118604ed30b932bfd_Emoji-8.png", "https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f984c2e6f3189b38ccda8b_Emoji-16.png"],
         backdropText: "デザイン",
         content: "I craft $ digital experiences $ for $ humans",

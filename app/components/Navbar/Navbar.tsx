@@ -10,16 +10,16 @@ const Navbar = () => {
     
     return (
         <section className='w-screen h-[14vh] text-white text-sm bg-transparent backdrop-blur-lg sticky top-0 z-[5] px-[4%] flex items-center justify-between'>
-            <Link href={"/"} className='w-[15%] flex items-center justify-start'>
+            <Link href={"/"} className='w-[20%] xl:w-[15%] flex items-center justify-start'>
                 <div className='w-fit flex items-center justify-start space-x-2 group cursor-pointer'>
                     <div className='w-8 aspect-square rounded-full overflow-hidden group-hover:scale-110 ease-in-out duration-200'>
                         <img src='/profile.png' alt="Dp" className='w-full h-full' />
                     </div>
-                    <p className='tracking-wide'>Darshan Hosangadi</p>
+                    <p className='flex-1 w-full tracking-wide'>Darshan Hosangadi</p>
                 </div>
             </Link>
 
-            <div className='w-[70%] h-full flex items-center justify-center space-x-[4%]'>
+            <div className='w-[60%] xl:w-[70%] h-full flex items-center justify-center space-x-[4%]'>
                 {
                     NavLinks.map((link) => (
                         <Link 
@@ -34,8 +34,8 @@ const Navbar = () => {
                 }
             </div>
 
-            <div className='w-[15%] h-fit flex items-center justify-end'>
-                <div className='w-[64%] h-fit relative group'>
+            <div className='w-[15%] h-fit flex items-center justify-end pr-2'>
+                <div className='w-[80%] xl:w-[64%] h-fit relative group'>
                     <div className='w-full py-2.5 bg-black border border-white/10 rounded-md flex items-center justify-center cursor-pointer space-x-2 ease-in-out group hover:scale-110 duration-200 relative z-[1]'>
                         <span className='uppercase !text-[10px]'>Let's Chat</span>
                         <div className='w-3 aspect-square flex flex-col overflow-hidden z-[1]'>

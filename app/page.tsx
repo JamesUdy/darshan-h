@@ -1,5 +1,9 @@
+import GroupLayout from "./components/GroupLayout";
+
 export default function Home() {
   return (
-    <section>Home</section>
+    <GroupLayout>
+      home
+    </GroupLayout>
   );
 }
