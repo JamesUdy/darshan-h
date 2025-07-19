@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import React, { memo, useEffect, useMemo, useState } from 'react';
 import { HeroContent } from '../constants';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -66,13 +67,13 @@ const Hero = memo(() => {
                             ))}
                             {memorizedHeroContent.icons[blockIdx] && (
                                 <motion.span key={`icon_${blockIdx}`} variants={itemVariants}>
-                                    <span className="inline-block scale-95 xl:scale-100 w-fit px-6 py-2 bg-black border relative top-[-12%] sm:top-[-24%] lg:top-[-6%] xl:top-[8%] border-white/10 rounded-full">
-                                        <img
-                                        src={memorizedHeroContent.icons[blockIdx]}
-                                        className="w-[2.4rem] sm:w-[4.4rem] lg:w-[5.6rem] aspect-square"
-                                        alt={`Icon ${blockIdx}`}
+                                    <div className="inline-block scale-95 xl:scale-100 w-fit px-6 py-2 bg-black border relative top-[-12%] sm:top-[-24%] lg:top-[-6%] xl:top-[8%] border-white/10 rounded-full">
+                                        <Image
+                                            src={memorizedHeroContent.icons[blockIdx]}
+                                            alt={`Icon ${blockIdx}`}
+                                            className="!w-[2.4rem] sm:!w-[4.4rem] lg:!w-[5.6rem] !aspect-square scale-75"
                                         />
-                                    </span>
+                                    </div>
                                 </motion.span>
                             )}
                         </React.Fragment>

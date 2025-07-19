@@ -2,7 +2,7 @@ type HeroContentVariantType = 'work' | 'about' | 'travel' | 'music' | 'tools' | 
 
 type HeroContentType = {
     header: string;
-    icons: string[];
+    icons: HeroContentIconType[];
     backdropText: string;
     content: string;
 };

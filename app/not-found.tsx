@@ -29,7 +29,7 @@ export default function NotFound() {
                     >   
                         <Button
                             buttonCls='w-fit py-2.5 px-4 font-semibold'
-                            iconUrl={"https://cdn.prod.website-files.com/67f8971aa0b7178b9d25fe06/67f984c12fdf115b2c1b8879_Emoji-22.png"}
+                            iconUrl={"/app/assets/hero/swag.png"}
                             text="Go Home"
                         />
                     </Link>
