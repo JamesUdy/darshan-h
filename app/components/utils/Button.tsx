@@ -15,7 +15,7 @@ const Button = ({ buttonCls, text, iconUrl, isCopy = false }: ButtonProps) => {
             {
                 iconUrl && <img src={iconUrl} alt={text} className='w-4 aspect-square object-contain contrast-0' />
             }
-            <span className='uppercase text-xs font-mono font-semibold'>{text}</span>
+            <span className='uppercase text-[10px] lg:text-xs font-mono font-semibold'>{text}</span>
             <div className='w-2.5 aspect-square flex flex-col overflow-hidden z-[1]'>
                 {
                     isCopy ? (
