@@ -51,12 +51,12 @@ const Hero = memo(() => {
     return (
         <section className='w-full h-[72vh] sm:h-[88vh] lg:h-[98vh] flex flex-col items-center justify-center relative overflow-hidden'>
             <div className='w-[98%] xl:w-[80%] h-full flex flex-col items-center justify-center z-[1] translate-y-[10%] lg:translate-y-0 space-y-8 lg:space-y-4 xl:translate-y-10'>
-                <p className='w-full text-white/40 tracking-wide uppercase text-[10px] text-center'>{memorizedHeroContent.header}</p>
+                <p className='w-[90%] xs:w-full text-white/40 tracking-wide uppercase text-[8px] xs:text-[10px] text-center'>{memorizedHeroContent.header}</p>
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate={isMounted ? 'show' : 'hidden'}
-                    className="w-[94%] lg:w-[98%] xl:w-full !text-[40px] sm:!text-[64px] lg:!text-[96px] xl:!text-[128px] font-semibold !scale-95 text-center tracking-tight leading-[1.64rem] lg:leading-[4.8rem] xl:leading-[6.8rem] text-white flex flex-wrap justify-center gap-2 lg:gap-4"
+                    className="w-[98%] xs:w-[94%] lg:w-[98%] xl:w-full text-[28px] 2xs:text-[36px] xs:!text-[40px] sm:!text-[64px] lg:!text-[96px] xl:!text-[128px] font-semibold !scale-95 text-center tracking-tight leading-[0.96rem] 2xs:leading-[1.2rem] xs:leading-[1.64rem] lg:leading-[4.8rem] xl:leading-[6.8rem] text-white flex flex-wrap justify-center gap-2 lg:gap-4"
                 >
                     {memorizedHeroContent.contentArr.map((textBlock, blockIdx) => (
                         <React.Fragment key={`block_${blockIdx}`}>
@@ -71,7 +71,7 @@ const Hero = memo(() => {
                                         <Image
                                             src={memorizedHeroContent.icons[blockIdx]}
                                             alt={`Icon ${blockIdx}`}
-                                            className="!w-[2.4rem] sm:!w-[4.4rem] lg:!w-[5.6rem] !aspect-square scale-75"
+                                            className="!w-[1.96rem] 2xs:!w-[2.4rem] sm:!w-[4.4rem] lg:!w-[5.6rem] !aspect-square scale-75"
                                         />
                                     </div>
                                 </motion.span>
@@ -80,7 +80,7 @@ const Hero = memo(() => {
                     ))}
                 </motion.div>
             </div>
-            <div className={`absolute top-[12%] lg:top-0 xl:top-[12%] left-0 w-full h-full flex items-center justify-center text-[72px] sm:text-[124px] lg:text-[164px] ${isMounted ? "scale-[1.8]" : "scale-[3.2]"} transition-all ease-in-out duration-300 whitespace-nowrap tracking-wider font-medium text-[#242424]/80 z-[0]`}>{memorizedHeroContent.backdropText}</div>
+            <div className={`absolute top-[12%] lg:top-0 xl:top-[12%] left-0 w-full h-full flex items-center justify-center text-[64px] sm:text-[124px] lg:text-[164px] ${isMounted ? "scale-[1.8]" : "scale-[3.2]"} transition-all ease-in-out duration-300 whitespace-nowrap tracking-tight sm:tracking-wider font-medium text-[#242424]/80 z-[0]`}>{memorizedHeroContent.backdropText}</div>
         </section>
     )
 })

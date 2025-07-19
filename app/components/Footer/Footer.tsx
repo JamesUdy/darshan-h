@@ -59,14 +59,14 @@ const Footer = memo(() => {
                         </div>
                     </div>
                     <div className='w-full h-[80%] flex flex-col items-start justify-end space-y-[6%] sm:space-y-[4%] relative'>
-                        <p className='w-full text-white text-[40px] sm:text-[56px] lg:text-[64px] font-bold leading-[2.4rem] sm:leading-[3.2rem] lg:leading-[3.6rem]'>I craft digital<br />experiences {" "}<br className='hidden sm:inline-block' />for humans</p>
+                        <p className='w-full text-white text-[28px] 2xs:text-[32px] xs:text-[40px] sm:text-[56px] lg:text-[64px] font-bold leading-[2.4rem] sm:leading-[3.2rem] lg:leading-[3.6rem]'>I craft digital<br />experiences {" "}<br className='hidden sm:inline-block' />for humans</p>
                         <div className='w-full'>
-                            <div className='w-[80%] xl:w-2/3 flex flex-wrap sm:flex-row sm:items-center sm:justify-start gap-2 sm:space-x-2 lg:space-x-4'>
+                            <div className='w-[90%] 2xs:w-[80%] xl:w-2/3 flex flex-wrap sm:flex-row sm:items-center sm:justify-start gap-2 sm:space-x-2 lg:space-x-4 xs:scale-100'>
                                 {
                                     FooterLinks.map((link, index) => (
                                         <Link
                                             key={index}
-                                            className='w-[40%] sm:w-fit'
+                                            className='w-[48%] xs:w-[40%] sm:w-fit'
                                             href={link.link}
                                         >   
                                             <Button

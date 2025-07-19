@@ -1,9 +1,10 @@
+import Image, { StaticImageData } from 'next/image';
 import React from 'react'
 
 interface ButtonProps {
     buttonCls: string;
     text: string;
-    iconUrl?: string;
+    iconUrl?: string | StaticImageData;
     isCopy?: boolean;
 };
 
@@ -15,7 +16,7 @@ const Button = ({ buttonCls, text, iconUrl, isCopy = false }: ButtonProps) => {
             className={`w-full ${buttonCls} flex-shrink-0 bg-black border border-white/10 rounded-md flex items-center justify-center cursor-pointer space-x-2 ease-in-out group hover:scale-110 duration-200 relative z-[1]`}
         >   
             {
-                iconUrl && <img src={iconUrl} alt={text} className='w-4 aspect-square object-contain contrast-0' />
+                iconUrl && <Image src={iconUrl} alt={text} width={16} height={16} className='!w-4 !aspect-square object-contain contrast-0' />
             }
             <span className='uppercase text-[10px] lg:text-xs font-mono font-semibold'>{text}</span>
             <div className='w-3 aspect-square flex flex-col overflow-hidden z-[1]'>

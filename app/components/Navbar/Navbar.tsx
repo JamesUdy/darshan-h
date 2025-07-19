@@ -7,10 +7,12 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 import Button from '../utils/Button';
 import SideBar from './SideBar';
 
+const SideBarIconUrl = "/icons";
+
 const Navbar = memo(() => {
     const currPathName = usePathname();
     const [showNavbar, setShowNavbar] = useState(true);
-    const [isSideBarOpened, setSideBarOpened] = useState<boolean>(true);
+    const [isSideBarOpened, setSideBarOpened] = useState<boolean>(false);
     const lastScrollY = useRef(0);
     const threshold = 80;
 
@@ -45,7 +47,7 @@ const Navbar = memo(() => {
     return (
         <React.Fragment>
             <section className={`w-screen h-[12vh] overflow-x-hidden !bg-[rgb(15,15,15)]/20 text-white text-sm backdrop-blur-lg sticky top-0 z-[5] px-[4%] flex items-center justify-between transition-all ease-linear duration-300 ${showNavbar ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-                <div className='w-[40%] sm:w-[24%] lg:w-[20%] xl:w-[15%] flex items-center justify-start'>
+                <div className='w-[64%] xs:w-[40%] sm:w-[24%] lg:w-[20%] xl:w-[15%] flex items-center justify-start'>
                     <Link href={"/"} className='w-fit flex items-center justify-start space-x-2 group cursor-pointer'>
                         <div className='w-8 aspect-square rounded-full overflow-hidden group-hover:scale-110 ease-in-out duration-200'>
                             <img src='/profile.png' alt="Dp" className='w-full h-full' />
@@ -81,16 +83,23 @@ const Navbar = memo(() => {
 
                 <div className="flex sm:hidden items-center justify-end w-[20%] aspect-square">
                     <div 
-                        className='w-[60%] aspect-square bg-black rounded-lg border border-gray-400/20'
+                        className='w-[56%] aspect-square bg-black rounded-lg border border-gray-400/20 !relative flex items-center justify-center'
                         onClick={(e) => {
                             e.stopPropagation();
                             onSideBarToggleHandler();
                         }}
-                    ></div>
+                    >
+                        <div className='w-[80%] aspect-square flex items-center justify-center'>
+                            <img src={`${SideBarIconUrl}/menu.png`} alt="Hamburger Menu" className={`${isSideBarOpened ? "scale-0" : "scale-70"} contrast-0 transition-all ease-in-out duration-200 w-full h-full object-contain`} />
+                        </div>
+                        <div className='w-full aspect-square flex items-center justify-center absolute top-0 left-0 z-[1]'>
+                            <img src={`${SideBarIconUrl}/close.png`} alt="Close" className={`${!isSideBarOpened ? "scale-0" : "scale-70"} contrast-0 transition-all ease-in-out duration-200 w-[80%] aspect-square object-contain`} />
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <SideBar isActive={isSideBarOpened} />
+            <SideBar isActive={isSideBarOpened} onClose={onSideBarToggleHandler} />
         </React.Fragment>
     )
 })
