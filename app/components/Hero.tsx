@@ -48,14 +48,14 @@ const Hero = memo(() => {
     if(!memorizedHeroContent) return null;
 
     return (
-        <section className='w-full h-[88vh] lg:h-[98vh] flex flex-col items-center justify-center relative overflow-hidden'>
+        <section className='w-full h-[72vh] sm:h-[88vh] lg:h-[98vh] flex flex-col items-center justify-center relative overflow-hidden'>
             <div className='w-[98%] xl:w-[80%] h-full flex flex-col items-center justify-center z-[1] translate-y-[10%] lg:translate-y-0 space-y-8 lg:space-y-4 xl:translate-y-10'>
                 <p className='w-full text-white/40 tracking-wide uppercase text-[10px] text-center'>{memorizedHeroContent.header}</p>
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate={isMounted ? 'show' : 'hidden'}
-                    className="w-[94%] lg:w-[98%] xl:w-full !text-[64px] lg:!text-[96px] xl:!text-[128px] font-semibold !scale-95 text-center tracking-tight leading-[1.64rem] lg:leading-[4.8rem] xl:leading-[6.8rem] text-white flex flex-wrap justify-center gap-2 lg:gap-4"
+                    className="w-[94%] lg:w-[98%] xl:w-full !text-[40px] sm:!text-[64px] lg:!text-[96px] xl:!text-[128px] font-semibold !scale-95 text-center tracking-tight leading-[1.64rem] lg:leading-[4.8rem] xl:leading-[6.8rem] text-white flex flex-wrap justify-center gap-2 lg:gap-4"
                 >
                     {memorizedHeroContent.contentArr.map((textBlock, blockIdx) => (
                         <React.Fragment key={`block_${blockIdx}`}>
@@ -66,10 +66,10 @@ const Hero = memo(() => {
                             ))}
                             {memorizedHeroContent.icons[blockIdx] && (
                                 <motion.span key={`icon_${blockIdx}`} variants={itemVariants}>
-                                    <span className="inline-block scale-95 xl:scale-100 w-fit px-6 py-2 bg-black border relative top-[-24%] lg:top-[-6%] xl:top-[8%] border-white/10 rounded-full">
+                                    <span className="inline-block scale-95 xl:scale-100 w-fit px-6 py-2 bg-black border relative top-[-12%] sm:top-[-24%] lg:top-[-6%] xl:top-[8%] border-white/10 rounded-full">
                                         <img
                                         src={memorizedHeroContent.icons[blockIdx]}
-                                        className="w-[4.4rem] lg:w-[5.6rem] aspect-square"
+                                        className="w-[2.4rem] sm:w-[4.4rem] lg:w-[5.6rem] aspect-square"
                                         alt={`Icon ${blockIdx}`}
                                         />
                                     </span>
@@ -79,7 +79,7 @@ const Hero = memo(() => {
                     ))}
                 </motion.div>
             </div>
-            <div className={`absolute top-[12%] lg:top-0 xl:top-[12%] left-0 w-full h-full flex items-center justify-center text-[124px] lg:text-[164px] ${isMounted ? "scale-[1.8]" : "scale-[3.2]"} ease-in-out duration-400 whitespace-nowrap tracking-wider font-medium text-[#242424]/80 z-[0]`}>{memorizedHeroContent.backdropText}</div>
+            <div className={`absolute top-[12%] lg:top-0 xl:top-[12%] left-0 w-full h-full flex items-center justify-center text-[72px] sm:text-[124px] lg:text-[164px] ${isMounted ? "scale-[1.8]" : "scale-[3.2]"} transition-all ease-in-out duration-300 whitespace-nowrap tracking-wider font-medium text-[#242424]/80 z-[0]`}>{memorizedHeroContent.backdropText}</div>
         </section>
     )
 })
