@@ -4,13 +4,15 @@ import { createMetadata } from '../lib/metadata';
 import GroupLayout from '../components/GroupLayout';
 import MountAnimator from '../components/utils/MountAnimator';
 import Image from 'next/image';
+import BaseContainer from '../components/utils/BaseContainer';
 
 export const metadata: Metadata = createMetadata("About");
 
 const About = () => {
     return (
         <GroupLayout>
-            <div className='w-full h-fit flex items-center justify-center'>
+            <div className='w-full h-fit flex flex-col items-center justify-start space-y-[20vh]'>
+                {/* about */}
                 <MountAnimator motionKey='about'>
                     <div className='w-[92%] h-[124vh] sm:h-[64vh] bg-black border border-gray-400/20 rounded-lg p-[6%] sm:p-[2.4%] flex flex-col items-start space-y-[2%] justify-between'>
                         <p className='font-mono uppercase text-white/40 text-[10px]'>About Me</p>
@@ -37,6 +39,23 @@ const About = () => {
                         </div>
                     </div>
                 </MountAnimator>
+
+                {/* musics */}
+                <div className='w-[92%] h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+                    {
+                        Array.from({ length: 3 }).map((_, index) => (
+                            <div key={index} className={`col-span-1 w-full h-[24vh] lg:h-[32vh] flex items-center justify-center`}>
+                                <MountAnimator motionKey={`music_${index}`}>
+                                    <BaseContainer
+                                        containerClass='w-full h-full'
+                                    >
+                                    <div className='w-full h-full flex items-center justify-center'>Music {index + 1}</div>
+                                    </BaseContainer>
+                                </MountAnimator>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </GroupLayout>
     )
