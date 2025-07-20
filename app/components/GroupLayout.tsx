@@ -10,7 +10,9 @@ const GroupLayout = ({ children }: { children: React.ReactNode }) => {
         
             <main className="w-screen h-fit flex flex-col items-center justify-start space-y-6 -translate-y-[8vh]">
                 <Hero />
-                {children}
+                <div className='w-full h-fit py-[6vh]'>
+                    {children}
+                </div>
             </main>
             
             <Footer />

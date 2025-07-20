@@ -51,7 +51,7 @@ const Hero = memo(() => {
     return (
         <section className='w-full h-[72vh] sm:h-[88vh] lg:h-[98vh] flex flex-col items-center justify-center relative overflow-hidden'>
             <div className='w-[98%] xl:w-[80%] h-full flex flex-col items-center justify-center z-[1] translate-y-[10%] lg:translate-y-0 space-y-8 lg:space-y-4 xl:translate-y-10'>
-                <p className='w-[90%] xs:w-full text-white/40 tracking-wide uppercase text-[8px] xs:text-[10px] text-center'>{memorizedHeroContent.header}</p>
+                <p className='w-[90%] xs:w-full text-white/40 tracking-wide uppercase text-[8px] xs:text-[10px] sm:text-xs text-center'>{memorizedHeroContent.header}</p>
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
