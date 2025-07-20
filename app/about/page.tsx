@@ -15,7 +15,7 @@ const About = () => {
                     <div className='w-[92%] h-[124vh] sm:h-[64vh] bg-black border border-gray-400/20 rounded-lg p-[6%] sm:p-[2.4%] flex flex-col items-start space-y-[2%] justify-between'>
                         <p className='font-mono uppercase text-white/40 text-[10px]'>About Me</p>
                         <div className='w-full h-[98%] flex flex-col sm:flex-row items-start xl:items-center justify-start translate-y-[6%] sm:translate-y-0 space-y-[5%] sm:space-x-[4%]'>
-                            <div className='w-full sm:w-[40%] xl:w-[28%] !h-[44%] sm:h-[90%] rounded-md overflow-hidden'>
+                            <div className='w-full sm:w-[40%] xl:w-[28%] h-[44%] sm:h-[90%] rounded-md overflow-hidden'>
                                 <img
                                     src="/profile.png"
                                     width="40"
